@@ -46,9 +46,7 @@ e.preventDefault();
         <h1>Simplest Working Calculator</h1> 
       </div> 
       <form> 
-        <p ref={resultRef}> 
-          {result} 
-        </p> 
+        <p ref={resultRef}>{result}</p> 
         <input
           pattern="[0-9]" 
           ref={inputRef} 
@@ -59,8 +57,8 @@ e.preventDefault();
         <button onClick={minus}>subtract</button> 
         <button onClick={times}>multiply</button> 
         <button onClick={divide}>divide</button> 
-        <button onClick={resetInput}>resetInput</button> 
-        <button onClick={resetResult}>resetResult</button> 
+        <button onClick={resetInput}>Reset input</button> 
+        <button onClick={resetResult}>Reset result</button> 
       </form> 
     </div> 
   ); 
