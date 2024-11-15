@@ -3,16 +3,39 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^8.14.0",
+    "@typescript-eslint/parser": "^8.14.0",
+    "eslint": "^8.57.1",
+    "mathjs": "^13.2.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-player": "^2.16.0",
     "react-router-dom": "^6.27.0",
-    "react-scripts": "0.9.5"
+    "react-scripts": "5.0.1",
+    "webpack": "^5.96.1"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "tail": "tailwindcss -i /home/blackdovah/Documents/GitHub/ReactCalculator/src/input.css -o /home/blackdovah/Documents/GitHub/ReactCalculator/src/output.css --watch"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.15"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
