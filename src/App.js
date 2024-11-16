@@ -1,10 +1,8 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState } from "react";
 import { evaluate } from "mathjs";
 import "./output.css";
 
 function App() {
-  const inputRef = useRef(null);
-  const resultRef = useRef(null);
   const [result, setResult] = useState("");
 
   function execute() {
