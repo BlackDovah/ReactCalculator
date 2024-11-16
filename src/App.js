@@ -1,13 +1,18 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { evaluate } from "mathjs";
 import "./output.css";
 
 function App() {
   const [result, setResult] = useState("");
+  const resultRef = useRef(result);
 
+  useEffect(() => {
+    resultRef.current = result;
+  }, [result]);
+  
   function execute() {
     try {
-      const resultValue = evaluate(result);
+      const resultValue = evaluate(resultRef.current);
       setResult(resultValue.toString());
     } catch {
       setResult("Error");
@@ -20,9 +25,9 @@ function App() {
       if (!isNaN(key) || "+-*/.".includes(key)) {
         console.log("Keys: ", key);
         setResult((prev) => prev + key);
-        console.log("results: ", result);
+        console.log("results: ", resultRef);
       } else if (key === "Enter") {
-        console.log("Evaluating on Enter: ", result);
+        console.log("Evaluating on Enter: ", resultRef);
         execute();
       } else if (key === "Backspace") {
         setResult((prev) => prev.slice(0, -1));
@@ -30,7 +35,7 @@ function App() {
     }
     window.addEventListener("keydown", handleKeyPress);
     return () => window.removeEventListener("keydown", handleKeyPress);
-  }, [result]);
+  }, []);
 
   function deleteLast() {
     setResult((prev) => prev.slice(0, -1));
