@@ -9,7 +9,6 @@ const Numpad = ({ result, setResult, cursorPosition, setCursorPosition }) => {
   return numpad.map((buttonLabel, index) => {
     const colStart = (index % 3) + 1;
     const rowStart = Math.floor(index / 3) + 1;
-    console.log(numpad)
 
     return (
       <button
