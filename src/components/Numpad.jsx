@@ -1,10 +1,15 @@
 const Numpad = ({ result, setResult, cursorPosition, setCursorPosition }) => {
-  const buttons = ["(", ")", "/", "*", "-", "+", "1", "2", "3", "0", "."];
+  const numpad = [
+    "7", "8", "9",
+    "4", "5", "6",
+    "1", "2", "3",
+    "0", ".", "=",
+  ];
 
-  return buttons.map((buttonLabel, index) => {
+  return numpad.map((buttonLabel, index) => {
     const colStart = (index % 3) + 1;
     const rowStart = Math.floor(index / 3) + 1;
-    console.log(colStart, rowStart)
+    console.log(numpad)
 
     return (
       <button
