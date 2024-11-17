@@ -3,7 +3,7 @@ const Numpad = ({ result, setResult, cursorPosition, setCursorPosition }) => {
     "7", "8", "9",
     "4", "5", "6",
     "1", "2", "3",
-    "0", ".", "=",
+    "0", ".",
   ];
 
   return numpad.map((buttonLabel, index) => {
